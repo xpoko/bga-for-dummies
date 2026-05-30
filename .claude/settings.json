@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -v \"^--$\")",
+      "Bash(grep -n 'foreach \\($players as $playerId' 'E:\\\\code\\\\pj\\\\waddle\\\\modules\\\\php\\\\States\\\\RoundEnd.php')",
+      "Bash(grep -n '$players.*=' 'E:\\\\code\\\\pj\\\\waddle\\\\modules\\\\php\\\\States\\\\RoundEnd.php')"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "offset-neighbor-confusion",
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "Response warns that offset coordinates cannot be directly added/subtracted for neighbor calculations",
+      "passed": false,
+      "evidence": "Provides lookup tables for 4 different offset conventions as the primary answer. Doesn't say offset is 'broken' or 'unsafe' — only says parity is 'the most common source of confusion'. Cube recommendation is a footnote at the end, not a warning upfront."
+    },
+    {
+      "text": "Response recommends converting to axial (or cube) coordinates before doing neighbor math",
+      "passed": true,
+      "evidence": "Final 'Recommendation' section suggests cube coordinates internally, convert to offset for display only"
+    },
+    {
+      "text": "Response mentions that offset neighbor offsets depend on whether the row (or column) is odd or even",
+      "passed": true,
+      "evidence": "Entire response is organized around parity; explicitly shows different tables for odd vs even rows across multiple conventions"
+    },
+    {
+      "text": "Any neighbor offsets provided are correct and consistent with either odd-r or even-r offset convention",
+      "passed": true,
+      "evidence": "Provides correct offsets for odd-r, even-r, and odd-q conventions; all verified correct for col=3, row=4"
+    }
+  ],
+  "pass_rate": 0.75
+}

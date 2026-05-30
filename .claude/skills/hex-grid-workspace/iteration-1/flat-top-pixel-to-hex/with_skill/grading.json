@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "flat-top-pixel-to-hex",
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "Response subtracts the origin offset (400, 300) from the pixel coordinate before converting",
+      "passed": true,
+      "evidence": "Step 1 explicitly subtracts: x = 523-400 = 123, y = 187-300 = -113"
+    },
+    {
+      "text": "Response uses the flat-top pixel-to-hex formula: q = (2/3 * x) / size, r = (-1/3 * x + sqrt(3)/3 * y) / size",
+      "passed": true,
+      "evidence": "Step 2 shows exact formula with labels, then substitutes values correctly"
+    },
+    {
+      "text": "Response uses cube rounding (resets the component with the largest rounding error) rather than rounding each component independently",
+      "passed": true,
+      "evidence": "Step 3 explicitly computes s_diff=0.4040 as largest, resets s=-q-r, verifies invariant holds"
+    },
+    {
+      "text": "Response arrives at the correct hex: axial q=1, r=-2 (equivalently cube q=1, r=-2, s=1)",
+      "passed": true,
+      "evidence": "Final answer: 'The player clicked hex (q = 1, r = -2)' with cube q=1, r=-2, s=1 stated"
+    }
+  ],
+  "pass_rate": 1.0
+}

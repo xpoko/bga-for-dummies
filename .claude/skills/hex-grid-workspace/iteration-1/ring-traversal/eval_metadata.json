@@ -1,0 +1,6 @@
+{
+  "eval_id": 2,
+  "eval_name": "ring-traversal",
+  "prompt": "I need to highlight all tiles exactly 2 steps away from a selected hex. The hex is at axial coordinates q=1, r=-2. Give me the list of all 12 surrounding hexes.",
+  "assertions": []
+}

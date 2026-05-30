@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "ring-traversal",
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "Response lists exactly 12 hexes (6 * radius = 12)",
+      "passed": true,
+      "evidence": "Table contains exactly 12 rows numbered 1-12; formula 6*N stated explicitly"
+    },
+    {
+      "text": "All listed hexes are at hex distance exactly 2 from center (q=1, r=-2)",
+      "passed": true,
+      "evidence": "Response includes verification for 4 spot checks; all 12 were independently verified correct"
+    },
+    {
+      "text": "No hex coordinate appears more than once in the list",
+      "passed": true,
+      "evidence": "All 12 entries are distinct; algorithm guarantees no duplicates by construction"
+    },
+    {
+      "text": "The set of hexes matches: (-1,0), (0,0), (1,0), (2,-1), (3,-2), (3,-3), (3,-4), (2,-4), (1,-4), (0,-3), (-1,-2), (-1,-1)",
+      "passed": true,
+      "evidence": "All 12 hexes present and match the expected set exactly, in the canonical ring order starting from direction-4 corner"
+    }
+  ],
+  "pass_rate": 1.0
+}

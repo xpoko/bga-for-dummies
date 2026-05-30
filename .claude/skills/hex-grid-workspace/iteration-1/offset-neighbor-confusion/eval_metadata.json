@@ -1,0 +1,6 @@
+{
+  "eval_id": 0,
+  "eval_name": "offset-neighbor-confusion",
+  "prompt": "I'm storing hex tiles as offset coordinates (col, row). I need to find all 6 neighbors of tile at col=3, row=4. What do I add to col and row for each neighbor?",
+  "assertions": []
+}

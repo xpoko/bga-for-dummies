@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "offset-neighbor-confusion",
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "Response warns that offset coordinates cannot be directly added/subtracted for neighbor calculations",
+      "passed": true,
+      "evidence": "Opens with: 'do not add offsets directly to offset coordinates. Offset coordinates are broken by design for neighbor math'"
+    },
+    {
+      "text": "Response recommends converting to axial (or cube) coordinates before doing neighbor math",
+      "passed": true,
+      "evidence": "Section header 'The Correct Approach: Convert to Axial, Compute, Convert Back' with full worked example"
+    },
+    {
+      "text": "Response mentions that offset neighbor offsets depend on whether the row (or column) is odd or even",
+      "passed": true,
+      "evidence": "Explains parity inline: 'row is even, so row & 1 = 0' during the conversion step, and concludes 'NE from an even row shifts col by 0, but from an odd row it shifts by +1'"
+    },
+    {
+      "text": "Any neighbor offsets provided are correct and consistent with either odd-r or even-r offset convention",
+      "passed": true,
+      "evidence": "Provides full table of 6 neighbors via axial→offset roundtrip, verified correct for odd-r convention with row=4 (even)"
+    }
+  ],
+  "pass_rate": 1.0
+}

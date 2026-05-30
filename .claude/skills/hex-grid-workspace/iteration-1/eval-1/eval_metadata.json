@@ -1,0 +1,6 @@
+{
+  "eval_id": 1,
+  "eval_name": "flat-top-pixel-to-hex",
+  "prompt": "My board uses flat-top hexagons, size=60px, centered at (400, 300). A player clicked at pixel (523, 187). Which hex did they click?",
+  "assertions": []
+}
