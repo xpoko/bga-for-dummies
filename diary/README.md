@@ -14,6 +14,7 @@ Scope covers **gameplay mechanisms and the scoring pipeline they feed into**: tu
 - [Active-hex activation](active-hex-activation.md) — water-hex pool, activation sequence
 - [Scoring](scoring.md) — pure waddle + fish algorithms, tied-rank fish-sharing, per-player breakdown arrays
 - [End-game flow](end-game-flow.md) — `GameEnd` / `MidGameReset` state machinery, breakdown persistence, reload-safe scoreboard
+- [Simulation testing](simulation-testing.md) — Studio-only Sim / Sim End buttons, pure action picker, auto-pause on `roundEnd`, source-text guards
 
 ## Reading Order
 
@@ -35,6 +36,9 @@ If you're new to the codebase, read [Glossary](glossary.md) first, then [Hex gri
 | End-game state, scoreboard payload, double-scoring guard | [modules/php/States/GameEnd.php](../modules/php/States/GameEnd.php) |
 | Half-1 snapshot before board wipe (Mirror Match) | [modules/php/States/MidGameReset.php](../modules/php/States/MidGameReset.php) |
 | Live lake-scored notification (rank-group waves) | [modules/php/States/RoundEnd.php](../modules/php/States/RoundEnd.php) |
+| Studio-only simulation action picker (pure) | [modules/php/Simulation.php](../modules/php/Simulation.php) |
+| `actSimulateStep` / `actSimulateEndGame` action methods | [modules/php/States/PlayerTurn.php](../modules/php/States/PlayerTurn.php) |
+| Client sim-loop, auto-pause flag, button wiring | [src/waddle.ts](../src/waddle.ts) |
 
 ## Entry Format
 
