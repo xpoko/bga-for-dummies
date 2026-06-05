@@ -15,6 +15,7 @@ Scope covers **gameplay mechanisms and the scoring pipeline they feed into**: tu
 - [Scoring](scoring.md) — pure waddle + fish algorithms, tied-rank fish-sharing, per-player breakdown arrays
 - [End-game flow](end-game-flow.md) — `GameEnd` / `MidGameReset` state machinery, breakdown persistence, reload-safe scoreboard
 - [Simulation testing](simulation-testing.md) — Studio-only Sim / Sim End buttons, pure action picker, auto-pause on `roundEnd`, source-text guards
+- [Table bootstrap](table-bootstrap.md) — *(cross-game framework plumbing)* the contract for getting a new project to create + load a table: player setup, `activeNextPlayer()`, the `zombie()` handler, smoke-test render. Companion to the [`bga-table-bootstrap`](../.claude/skills/bga-table-bootstrap/SKILL.md) skill
 
 ## Reading Order
 
